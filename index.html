@@ -1,83 +1,37 @@
 <!DOCTYPE html>
-    <title>RadioKpi</title>
+<html style="height: auto;width: auto;">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="twitter:description" content="Радіо кращого технічного вишу.">
-    <meta name="twitter:card" content="summary">
-    <meta property="og:image" content="assets/logo.jpg">
-    <meta property="og:type" content="website">
-    <meta name="description" content="Радіо кращого технічного вишу.">
-    <meta name="twitter:image" content="assets/logo.jpg">
-    <meta name="twitter:title" content="RADIO KPI">
-    <link rel="icon" type="image/png" sizes="32x32"   href="assets/favicon/favicon32.png">
-    <link rel="icon" type="image/png" sizes="180x180" href="assets/favicon/favicon180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon192.png">
-    <link rel="stylesheet" href="assets/bootstrap.min.css">
-    <link rel="manifest"   href="assets/manifest.json">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/ionicons.min.css">
+    <title>RadioKPI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient py-1">
-        <div class="container"><a class="navbar-brand logo" href="http://r.kpi.ua/#">RadioKpi</a>
-        </div>
-    </nav>
-    <main class="page project-page">
-        <section class="portfolio-block project" style="padding-top: 0;">
-            <div class="container">
-                <a href="http://77.47.130.190:8000/stream.ogg">
-                    <div class="image logoimg"></div>
-                </a>
-                <div class="row">
-                    <div class="col-12 col-md-6 offset-md-1 info pt-2">
-                        <h2>Про нас</h2>
-                        <p>RadioKPI — це не просто кілька кпішників, які люблять музику. Це яскрава команда, де кожен — особистість, бо йдуть по своєму творчому шляху, тим самим створюючи своє RadioKPI.<br>Вони приходять і майже живуть у підпіллі RadioKPI,
-                            щоб ви почули та побачили краще. <br>RadioKPI — це не просто музика, а черговий привід прогулятись по Політехнічній, замовивши свою улюблену пісню, або посидіти на Поляні з друзями та поспілкуватися з ведучими через нашого
-                            бота.<br></p>
-                        <p>Зробимо таке радіо, яке би слухали самі!</p>
-                    </div>
-                    <div class="col-12 col-md-3 offset-md-1 pt-2">
-                        <h2>Посилання</h2>
-                        <div class="shadow-none contact-info portfolio-info-card p-0" style="min-width: 270px;">
-                            <div class="row" style="font-weight: bold;">
-                                <div class="col-1"><i class="icon ion-android-send icon"></i></div>
-                                <div class="col-9"><a href="https://t.me/kpiradio_bot">Замовити пісню</a></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-1"><i class="icon ion-person-stalker icon"></i></div>
-                                <div class="col-9"><a href="https://t.me/rhub_kpi">Наш чат</a></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-1"><i class="icon ion-speakerphone icon"></i></div>
-                                <div class="col-9"><a href="https://t.me/radio_kpi">Наш тг канал</a></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-1"><i class="icon ion-social-youtube icon"></i></div>
-                                <div class="col-9"><a href="https://www.youtube.com/channel/UCNiZmCWLebmCz_M-mwrcZUw">Наш ютуб канал</a></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-1"><i class="icon ion-social-instagram-outline icon"></i></div>
-                                <div class="col-9"><a href="https://www.instagram.com/radio_kpi/">Наш інстаграм</a></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-1"><i class="icon ion-android-search icon"></i></div>
-                                <div class="col-9"><a href="https://t.me/rkpi_music">Історія пісень</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<body id="body-section" class="container-fluid">
+    <div id="main-page">
+        <header><img class="img-fluid float-right" src="assets/img/header-logo.svg"></header>
+        <section id="play-section" class="container">
+            <div id="current-song-box">
+                <div style="display: inline-flex;align-items: center;"><button class="btn btn-primary img-fluid" id="playcircle" type="button"></button>
+                    <p class="text-capitalize" id="current-song-name">Sunset Lover - Petit Biscuit<br></p>
+                </div><img id="headphones-img" src="assets/img/headphones.svg"></div><input type="range" orient="vertical"></section>
+        <section id="playlist" class="container">
+            <div id="history-header">
+                <p>раніше</p>
+                <div><a id="history-button" href="https://t.me/rkpi_music"></a><a id="add-song-button" href="https://t.me/kpiradio_bot"></a></div>
             </div>
+            <ul id="song-list" class="text-wrap">
+                <li class="text-wrap"><a id="history-url-first" href="#">Sunset Lover - Petit Biscuit</a></li>
+                <li><a id="history-url-second" href="#">High Hopes - Kodaline</a></li>
+                <li><a id="history-url-third" href="#">Promise - Ben Howard</a></li>
+            </ul>
         </section>
-    </main>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="social-icons">
-                <a href="https://t.me/kpiradio_bot"><i class="icon ion-paper-airplane"></i></a>
-                <a href="https://www.instagram.com/radio_kpi/"><i class="icon ion-social-instagram-outline"></i></a>
-                <a href="https://www.youtube.com/channel/UCNiZmCWLebmCz_M-mwrcZUw"><i class="icon ion-social-youtube-outline"></i></a>
-            </div>
-        </div>
-    </footer>
+    </div>
+    <footer class="footer-basic text-center" data-classes="fixed-bottom" style="width: 100%;"><img src="assets/img/footer-logo.svg" style="padding-top: 1.25rem;padding-left: 1rem;padding-right: 1rem;"><a id="footer-link" class="text-center" href="#" style="padding: 1.25rem;padding-bottom: 1.375rem;">Є питання?</a></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
 
-</body></html>
+</html>
