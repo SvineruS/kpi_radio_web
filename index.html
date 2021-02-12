@@ -25,12 +25,14 @@
         <header><img class="img-fluid" src="assets/img/header-logo.svg"></header>
         <section id="play-section" class="container">
             <div id="current-song-box">
-                <div style="display: inline-flex;align-items: center;"><button class="btn btn-primary img-fluid" id="playcircle" type="button"></button>
+                <div style="display: inline-flex;align-items: center;">
+                    <button class="btn btn-primary img-fluid" id="playcircle" type="button"></button>
                     <p class="text-capitalize" id="current-song-name">Sunset Lover - Petit Biscuit<br></p>
                 </div>
                 <img id="headphones-img" src="assets/img/headphones.svg">
             </div>
-            <input type="range" orient="vertical"></section>
+            <input type="range" orient="vertical">
+        </section>
         <section id="playlist" class="container">
             <div id="history-header">
                 <p>раніше</p>
@@ -40,10 +42,11 @@
                 </div>
             </div>
             <ul id="song-list" class="text-wrap">
+                <!-- id's "history-url-*" are provided to make dynamic content changes -->
                 <li class="text-wrap"><a id="history-url-first" href="#">Sunset Lover - Petit Biscuit</a></li>
                 <li><a id="history-url-second" href="#">High Hopes - Kodaline</a></li>
                 <li><a id="history-url-third" href="#">Promise - Ben Howard</a></li>
-            </ul>
+                </ul>
         </section>
     </div>
     <footer class="footer-basic text-center" data-classes="fixed-bottom" style="width: 100%;">
