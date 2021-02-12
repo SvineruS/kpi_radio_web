@@ -41,8 +41,10 @@ header {
   display: grid;
   grid-template-areas: "a b";
   justify-content: flex-end;
-  grid-column: 3;
+  grid-column: 1/4;
   grid-row: 4/5;
+  margin-right: 0;
+  margin-left: auto;
 }
 
 #play-section #current-song-box {
@@ -250,6 +252,8 @@ header {
     grid-row: 4/5;
     height: auto;
     width: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #current-song-box {width: auto;}
@@ -293,12 +297,25 @@ header {
   }
 
   #current-song-name {
-    font-size: 6vw !important;
-    line-height: 6vw !important;
+    font-size: 6.5vw !important;
+    line-height: 7vw !important;
     margin-right: 1rem !important;
   }
 
   #song-list {
     font-size: 7vw !important;
+  }
+}
+
+@media (max-width: 350px) {
+  #current-song-name {
+    font-size: 6.25vw !important;
+    line-height: 7vw !important;
+    margin-right: 1rem !important;
+  }
+
+  #song-list {
+    font-size: 6vw !important;
+    line-height: 0.75rem;
   }
 }
