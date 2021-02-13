@@ -4,12 +4,20 @@
   height: 100%;
 }
 
+@font-face {
+  font-family: Gilroy;
+  src: url("../font/Gilroy-Regular.ttf") format("ttf"),
+       url("../font/Gilroy-Regular.woff") format("woff"),
+       url("../font/Gilroy-Regular.eot") format("eot");
+  font-display: swap;
+}
+
 /************************************************/
 
 #main-page {
   display: grid;
-  grid-template-columns: auto 16.12px 15.88px 126px;
-  grid-template-rows: 91px 60.57px 50.43px 70px 51px 145px auto;
+  grid-template-columns: auto 1.0075rem 0.9925rem 7.875rem;
+  grid-template-rows: 5.6875rem 3.785625rem 3.15625rem 4.375rem 3.1875rem 9.0625rem auto;
   height: 100vh;
   width: auto;
   resize: initial;
@@ -20,10 +28,7 @@ header {
   display: grid;
   grid-column: 1/4;
   grid-row: 2/3;
-  justify-content: end; /*flex-end;*/
-  /* margin-top: 12vh; */
-  /* margin-right: 9.25vw; */
-  /* margin-left: 9.25vw; */
+  justify-content: end;
 }
 
 #footer {
@@ -32,7 +37,7 @@ header {
   height: 145px;
   top: 100%;
   background: #F6CB58;
-  box-shadow: inset 0px 4px 4px rgba(214, 164, 30, 0.25), inset 0px -4px 4px #D6A41E;
+  box-shadow: inset 0 4px 4px rgba(214, 164, 30, 0.25), inset 0 -4px 4px #D6A41E;
 }
 
 /************************************************/
@@ -55,7 +60,7 @@ header {
   max-width: 20.375rem;
   height: 4.375rem;
   background: #F6CB58;
-  box-shadow: inset 0px 4px 4px rgba(214, 164, 30, 0.25), inset 0px -4px 4px #D6A41E;
+  box-shadow: inset 0 4px 4px rgba(214, 164, 30, 0.25), inset 0 -4px 4px #d6a41e;
   border-radius: 10px;
 }
 
@@ -66,7 +71,27 @@ header {
   margin-left: .8125rem;
 }
 
-#play-section #current-song-box #playcircle {
+#play-section #add-song-link-wrapper {
+  visibility: visible;
+  display: grid;
+  grid-column: 1/4;
+  grid-row: 4/5;
+}
+
+#play-section #add-song-link {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+}
+
+#play-section #add-song-link:hover {color: #9303aa;}
+
+#play-section #current-song-box #play-btn {
   position: relative;
   width: 4.8125rem;
   height: 4.8125rem;
@@ -80,17 +105,14 @@ header {
 }
 
 #play-section #current-song-box #current-song-name {
-  margin: 0;
+  margin: 0 1.5rem 0 -2rem;
   padding: 0;
-  margin-left: -2rem;
-  margin-right: 1.5rem;
   font-family: Gilroy;
   font-style: normal;
   font-weight: normal;
   font-size: 1.5rem;
   line-height: 1.75rem;
   color: #FFFFFF;
-  text-size-adjust: 75%;
 }
 
 #play-section #current-song-box #headphones-img {
@@ -121,7 +143,7 @@ header {
   max-width: 22.375rem;
   height: max-content;
   background: #F6CB58;
-  box-shadow: inset 0px 4px 4px rgba(214, 164, 30, 0.25), inset 0px -4px 4px #D6A41E;
+  box-shadow: inset 0 4px 4px rgba(214, 164, 30, 0.25), inset 0 -4px 4px #D6A41E;
   border-radius: 10px;
 }
 
@@ -149,7 +171,7 @@ header {
 #playlist #history-header p {
   font-family: Gilroy;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 20px;
   line-height: 24px;
   text-decoration-line: underline;
@@ -165,24 +187,24 @@ header {
 }
 
 #playlist #history-header div #history-button {
-  width: 23.44px;
-  height: 23.44px;
-  opacity: 0.75;
-  background: url("../../assets/img/history-button.svg");
+  visibility: hidden;
+  width: 1.465rem;
+  height: 1.465rem;
 }
-
-#playlist #history-header div #history-button:hover {opacity: 1;}
+#playlist #history-header div #history-button:hover {
+  stroke: #9303aa;
+}
 
 #playlist #history-header div #add-song-button {
-  width: 23.44px;
-  height: 23.44px;
-  opacity: 0.75;
-  background: url("../../assets/img/add-song-button.svg");
-  background-color: transparent;
+  visibility: hidden;
+  width: 1.465rem;
+  height: 1.465rem;
+  background: transparent;
   border-color: transparent;
 }
-
-#playlist #history-header div #add-song-button:hover {opacity: 1;}
+#playlist #history-header div #add-song-button:hover {
+  stroke: #9303aa;
+}
 
 #playlist #song-list li a {
   color: #fff;
@@ -191,7 +213,7 @@ header {
 
 #playlist #song-list li a:hover {
   text-decoration: underline;
-  color: #909090;
+  color: #9303aa;
 }
 
 /************************************************/
@@ -214,24 +236,24 @@ header {
   margin-top: 1.28125rem;
   margin-bottom: 1.375rem;
 }
+#footer-link:hover {color: #9303aa;}
 
 .footer-basic {
-  background-color: #ffffff;
   color: #4b4c4d;
   background: #F6CB58;
-  box-shadow: inset 0px 4px 4px rgba(214, 164, 30, 0.25), inset 0px -4px 4px #D6A41E;
+  box-shadow: inset 0 4px 4px rgba(214, 164, 30, 0.25), inset 0 -4px 4px #D6A41E;
   display: flex;
   flex-direction: column;
 }
 
 /************************************************/
 
-@media (max-width: 768px) {
-
+@media only screen and (max-width: 770px),
+       only screen and (max-height: 500px) {
   #main-page {
     display: grid;
-    grid-template-columns: 28px 19px 23px auto 23px 19px 33px;
-    grid-template-rows: 43.4px 10vw 26.12px 62px 17px 79px;
+    grid-template-columns: 1.75rem 1.1875rem 1.4375rem auto 1.4375rem 1.1875rem 2.0625rem;
+    grid-template-rows: 2.6875rem 10vw 1.625rem 3.875rem 1.125rem 5rem;
   }
 
   header {
@@ -258,7 +280,7 @@ header {
 
   #current-song-box {width: auto;}
 
-  #playcircle {
+  #play-btn {
     width: 4rem;
     height: 4rem;
     top: 0;
@@ -272,6 +294,8 @@ header {
     margin-right: 1.5rem;
   }
 
+  #add-song-link-wrapper {visibility: hidden !important;}
+
   #playlist {
     display: grid;
     grid-column: 2/7;
@@ -280,6 +304,10 @@ header {
     margin-right: auto;
     margin-left: auto;
   }
+
+  #add-song-button {visibility: visible !important;}
+
+  #history-button {visibility: visible !important;}
 
   #song-list li:not(:first-child){
     display: none;
@@ -291,13 +319,13 @@ header {
   }
 }
 
-@media (max-width: 425px) {
+@media only screen and (max-width: 425px) {
   #main-page {
-    grid-template-columns: 14px 9.5px 11.5px auto 11.5px 9.5px 16.5px;
+    grid-template-columns: 0.875rem 0.5625rem 0.6875rem auto 0.6875rem 0.5625rem 1rem;
   }
 
   #current-song-name {
-    font-size: 6.5vw !important;
+    font-size: 5.5vw !important;
     line-height: 7vw !important;
     margin-right: 1rem !important;
   }
@@ -307,9 +335,17 @@ header {
   }
 }
 
-@media (max-width: 350px) {
+@media only screen and (max-width: 350px) {
+  #play-btn {
+    transform: scale(0.8);
+  }
+
+  #play-section input[type=range][orient=vertical] {
+    margin-left: 0.4375rem;
+  }
+
   #current-song-name {
-    font-size: 6.25vw !important;
+    /*font-size: 5.25vw !important;*/
     line-height: 7vw !important;
     margin-right: 1rem !important;
   }
