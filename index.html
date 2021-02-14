@@ -28,14 +28,14 @@
         <section id="play-section" class="container">
             <div id="current-song-box">
                 <div style="display: inline-flex;align-items: center;">
-                    <button class="btn btn-primary img-fluid"
-                            id="play-btn" type="button" aria-label="Play music">
+                    <button class="btn btn-primary img-fluid" id="play-btn" type="button"
+                            aria-label="Play music" data-state="paused" onclick="stream.toggle()">
                     </button>
                     <p class="text-capitalize" id="current-song-name">Sunset Lover - Petite Biscuit</p>
                 </div>
                 <img id="headphones-img" src="assets/img/headphones.svg" alt="headphones">
             </div>
-            <label><input type="range" orient="vertical"></label>
+            <label><input id="sound-volume" type="range" orient="vertical" min="0" max="1" step="0.01" value="0.7" onchange="stream.updateVolume()"></label>
             <p id="add-song-link-wrapper">
                 <a id="add-song-link" href="https://t.me/kpiradio_bot">замовити трек</a>
             </p>
@@ -73,10 +73,10 @@
                 </div>
             </div>
             <ul id="song-list" class="text-wrap">
-                <!-- id's "history-url-*" are provided to make dynamic content changes -->
-                <li class="text-wrap"><a id="history-url-first" href="#">Sunset Lover - Petite Biscuit</a></li>
-                <li><a id="history-url-second" href="#">High Hopes - Kodaline</a></li>
-                <li><a id="history-url-third" href="#">Promise - Ben Howard</a></li>
+                <!-- class "history-url" is provided to make dynamic content changes -->
+                <li class="text-wrap"><a class="history-url" href="#">Sunset Lover - Petite Biscuit</a></li>
+                <li><a class="history-url" href="#">High Hopes - Kodaline</a></li>
+                <li><a class="history-url" href="#">Promise - Ben Howard</a></li>
                 </ul>
         </section>
     </div>
@@ -85,11 +85,12 @@
         <a id="footer-link" class="text-center" href="https://t.me/rhub_kpi">Є питання?</a>
     </footer>
 
-    <!-- JavaScript Bundle with Popper -->
+    <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous">
     </script>
+    <script src="assets/js/logic.js"></script>
 </body>
 
 </html>
