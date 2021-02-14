@@ -69,4 +69,4 @@ class historyHandler {
 
 const stream = new streamHandler();
 const history = new historyHandler();
-history.mockUpdate()
+history.update()
